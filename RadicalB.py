@@ -264,8 +264,7 @@ class RadicalB:
     def S_vec_single_radical_basis(cls):
         return np.array([scipy.sparse.kron(scipy.sparse.identity(RadicalB.Ib_dimension(), format='coo'), scipy.sparse.kron(spin_operator, scipy.sparse.identity(RadicalB.Ia_dimension(), format ='coo'))) for spin_operator in [sx_spinhalf, sy_spinhalf, sz_spinhalf]])
 
-    def I_vec_total_basis(self):
-        return np.array([scipy.sparse.kron(scipy.sparse.identity(RadicalA.I_radical_dimension(), format='coo'), self.I_vec_single_radical_basis()[x]) for x in [0,1,2]])
+
 
 
 

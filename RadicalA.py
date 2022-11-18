@@ -30,7 +30,14 @@ sz_spin1 = np.array([[1, 0, 0], [0, 0, 0], [0, 0, -1]])
 gyromag = scipy.constants.physical_constants['electron gyromagn. ratio'][0] / 1000   # NB ! in rad s^-1 mT^-1
 i4 = scipy.sparse.identity(4)
 
-TrpH_HFITs = np.load('../TrpH Calculations/TrpH_HFITS_MHz_ROTATED.npy')
+TrpH_HFITs = np.load('../TrpH Calculations/CSVs and NPYs/TrpH_HFITS_MHz_ROTATED.npy')
+
+field_directions_df = pd.read_csv('alice/field_directions.csv')
+
+list_of_field_directions = [entry for entry in tuple(field_directions_df.values)]
+
+
+
 
 # Defining our RadicalA class
 
